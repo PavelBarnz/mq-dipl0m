@@ -1,0 +1,902 @@
+/*** НАВИГАЦИЯ ***/
+/*1. Шапка страницы */
+/*2. Навигация шапки страницы */
+/*2.1 Бургер меню*/
+/*3. Блок сейчас в тренде */
+/*3.1 Теги страницы */ /*- Стили тегов всей страницы*/
+/*4. Контент страницы */
+/*4.1 Карточки основного контента*/
+/*5. aside*/
+/*5.1 aside Новые посты*/
+/*5.2 aside Форма поиска*/
+/*5.3 aside Форма подписки*/
+/*5.4 Теги*/
+/*5.5 Блок Темы*/
+/*6. Блок Наши изделия*/
+/*7. Подвал*/
+/*8 Всплывающее окно POPUP*/
+/*****************/
+
+* {
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*1. Шапка страницы */
+.page-header {
+    height: 449px;
+    background: url(../images/banner-bg.jpg) center/cover no-repeat #794e4e;
+
+    position: relative;
+}
+.page-header::after {
+    content:"";
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.page-header-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    height: 100%;
+    padding: 28px 15px 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 45px;
+}
+
+.noemi-logo {
+    width: 179px;
+}
+
+.noemi-logo-mobile {
+    display: none;
+}
+/*********************************************/
+
+
+/*2.1 Бургер меню*/
+.burger-menu-button {
+    width: 25px;
+    height: 22px;
+    display: none;
+    position: relative;
+}
+
+.burger-menu-button:hover {
+    width: 27px;
+    height: 24px;
+}
+
+.burger-menu {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    margin: auto;
+}
+
+.burger-menu::before {
+    content:"";
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+.burger-menu::after {
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+/************************/
+
+
+/*2. Навигация шапки страницы*/
+.page-header-nav {
+    align-self: center;
+}
+
+.page-header-menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.page-header-menu li {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.header-menu-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+}
+.header-menu-link:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.page-header-title {
+    max-width: 690px;
+    margin: 80px auto 0;
+}
+
+.header-title {
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1.666;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+/************************************/
+
+
+/*3. Блок сейчас в тренде */
+.now-tranding-container {
+    padding-top: 59px;
+}
+
+.page-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 20px;
+    color: #161516;
+    margin-bottom: 28px;
+}
+.page-title::after{
+    content:"";
+    display: block;
+    margin: 10px auto 0;
+    width: 67px;
+    height: 3px;
+    background-color: #dfd8bf;
+}
+
+.now-tranding-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.now-tranding-card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: calc((100% / 4) - 0.1%);
+    height: 320px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.trend {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.now-tranding-card::before {
+    content: "";
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.now-tranding-card-content{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 7.5% 7%;
+    border: 3px solid #867c55;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 16px;
+}
+
+
+/*3.1 Теги страницы */
+.page-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+.page-tags-link {
+    color: #ae9e5f;
+    font-size: 14px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.page-tags-link:hover {
+    border-bottom: 1px solid #ae9e5f;
+}
+/*****************************************/
+
+.now-tranding-card-title {
+    margin-top: 6px;
+}
+
+.now-tranding-link {
+    font-family: OpenSans;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/********************************************************************************/
+
+
+/*4. Контент страницы */
+.page-content {
+    max-width: 1200px;
+    padding: 64px 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.page-content-shell {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.main {
+    max-width: 765px;
+    box-sizing: border-box;
+}
+
+
+/*4.1 Карточки основного контента*/
+.main-card {
+    margin-top: 59px;
+    display: flex;
+}
+.main-card:first-child {
+    margin-top: 0;
+}
+
+.main-card-image {
+    width: 50%;
+}
+
+.main-card-picture {
+    width: 100%;
+    min-height: 294px;
+}
+
+.main-card-content {
+    width: 50%;
+    padding-left: 4%;
+}
+
+.main-card-title {
+    margin-top: 15px;
+    font-family: OpenSans, sans-serif; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.page-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+.page-title-link:hover {
+    color: #ae9e5f;
+}
+
+.main-card-date {
+    margin-top: 37px;
+    margin-bottom: 55px;
+}
+
+.card-time {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #888888;
+}
+
+.main-card-autor {
+    margin-left: 15px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #000;
+}
+
+.main-card-article {
+    text-overflow: ellipsis;
+}
+
+.main-card-text {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+}
+
+.main-card-text-source {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+.main-card-text-source:hover {
+    text-decoration: underline;
+}
+/****************************************************/
+
+
+/*5. aside*/
+.aside {
+    max-width: 275px;
+    box-sizing: border-box;
+    margin-left: 15px;
+}
+
+.aside-title {
+    margin-bottom: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #161516;
+}
+.aside-title::after{
+    content:"";
+    display: block;
+    margin: 10px auto 0;
+    width: 67px;
+    height: 3px;
+    background-color: #dfd8bf;
+}
+/****************************/
+
+/*5.1 aside Новые посты*/
+.new-posts-card {
+    display: flex;
+    margin-top: 22px;
+}
+.new-posts-card:first-child {
+    margin-top: 0;
+} 
+
+.new-posts-card-img {
+    width: 70px;
+    height: 70px;
+}
+
+.new-posts-card-content {
+    margin-left: 20px;
+}
+
+.new-posts-card-title {
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+}
+/**************************************/
+
+
+
+/*5.2 aside Форма поиска*/
+.search-form-container {
+   margin: 60px 0;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form-label {
+    width: calc(100% - 48px);
+}
+
+.search-form-field {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: #f5f7f6;
+    box-sizing: border-box;
+    padding: 18px 0 18px 18px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #888888;
+}
+.search-form-field:focus {
+    outline: 1px solid #ae9e5f;
+}
+
+.search-form-button {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border: none;
+    padding: 0;
+    background-color: #ae9e5f;
+    background-image: url(../svg/search.svg);
+    background-size: 18px 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.search-form-button:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+/***********************************************/
+
+
+
+/*5.3 aside Форма подписки*/
+.subscription-form-container {
+    margin-bottom: 60px;
+}
+
+.subscription-form-field {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: #f5f7f6;
+    box-sizing: border-box;
+    padding: 18px 0 18px 18px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #888888;
+    margin-bottom: 18px;
+}
+.subscription-form-field:focus {
+    outline: 1px solid #ae9e5f;
+}
+
+.subscription-form-button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: #ae9e5f;
+    box-sizing: border-box;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.subscription-form-button:focus {
+    background-color: #000;
+}
+/*******************************************/
+
+
+
+/*5.4 Теги*/
+.tags-container {
+    margin-bottom: 60px ;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags-link {
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 6px;
+}
+.tags-item:hover {
+    border-color: #ae9e5f;
+}
+
+.tags-item {
+    border: 3px solid #ededed;
+    padding: 6px 12px;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.tags-link {
+    margin-bottom: 6px;
+}
+/*************************************************/
+
+
+/*5.5 Блок Темы*/
+.thme-item {
+    width: 100%;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #ededed;
+}
+.thme-item:nth-child(n + 2) {
+    margin-top: 15px;
+}
+
+.theme-link {
+    text-decoration: none;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+}
+
+.theme-link:hover {
+    color: #ae9e5f;
+}
+
+.thme-item-updates {
+    vertical-align: top;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #ae9e5f;
+    margin-left: 3px;
+}
+/**************************************************/
+
+
+
+/*6. Блок Наши изделия*/
+.our-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.our-products-item {
+    max-width: 350px;
+}
+
+.our-products-item:nth-child(n + 4) {
+    margin-top: 25px;
+}
+
+.our-products-picture {
+    display: block;
+    margin: 0 auto;
+    width: 87%;
+    height: 205px;
+}
+
+.our-products-content {
+    margin-top: -32px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 55px 20px 26px;
+    border: 3px solid #ae9e5f;
+    width: 100%;
+    min-height: 270px;
+}
+
+.our-products-title {
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.our-products-item-description {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.our-products-link {
+    text-decoration: none;
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #ae9e5f;
+}
+.our-products-link:hover {
+    text-decoration: underline;
+}
+
+.price-and-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.old-price {
+    display: block;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.new-price {
+    display: block;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.buy {
+    width: 141px;
+    height: 49px;
+    background-color: #ae9e5f;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.buy:hover {
+    background-color: #000;
+}
+/***************************************************/
+
+/*7. Подвал*/
+.page-footer {
+    max-width: 1200px;
+    box-sizing: border-box;
+    padding: 0 15px 44px;
+    margin: 0 auto;
+}
+
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #f5f7f6;
+}
+
+.social-links {
+    align-self: center;
+    display: flex;
+}
+
+.social-links-item {
+    margin-right: 20px;
+}
+
+.twitter, .instagram, .painterest, .facebook, .tumblr { width: 20px; }
+
+.social-links-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+.copyright-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+}
+
+.copyright {
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #989898;
+    text-decoration: none;
+}
+
+.copyright:hover {
+    text-decoration: underline;
+}
+/***************************************************/
+
+
+/*8 Всплывающее окно POPUP*/
+#hidden {
+    display: none;
+}
+
+.popup {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.popup::before {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.6;
+} 
+
+.popup-container {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    margin-left: auto;
+}
+
+.popup-feedback {
+    width: 390px;
+    box-sizing: border-box;
+    padding: 45px 30px;
+    background-color: #fff;
+}
+
+.feedback-form-area {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.feedback-form-text {
+    font-family: OpenSans;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000;
+}
+
+.choise-answer {
+    margin-top: 12px;
+
+    width: 100%;
+    height: 49px;
+    box-sizing: border-box;
+    border: 0;
+    padding-left: 19px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    color: rgba(0, 0, 0, 0.5);
+    font-family: OpenSans;
+    font-weight: 400;
+    font-size: 13px;
+
+    background: url(../svg/form-arrows.svg) center right 14px/10px no-repeat #f5f7f6;
+}
+.choise-answer:focus {
+    outline-style: none;
+    border-bottom: 1px solid #eae7d9;
+}
+
+.feedback-form-label {
+    margin-right: 8px;
+}
+
+.feedback-form-radio-group {
+    margin-top: 12px;
+}
+
+.radio {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.radio:checked ~ .radio-group-text::before {
+    background-image: url(../svg/form-circle.svg);
+}
+
+.radio-group-text {
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #000;
+}
+.radio-group-text::before {
+    content:"";
+    display: inline-block;
+
+    width: 15px;
+    height: 15px;
+
+    background: url(../svg/form-empty-circle.svg) center/15px no-repeat;
+    margin-right: 5px;
+}
+
+.your-message {
+    display: block;
+    margin-top: 12px;
+
+    width: 100%;
+    height: 130px;
+    resize: none;
+
+    border: none;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f5f7f6;
+
+    font-family: OpenSans, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.your-message:focus {
+    border: 1px solid #ae9e5f;
+    outline: none;
+}
+
+.feedback-form-button {
+    margin-top: 25px;
+    width: 100%;
+    height: 48px;
+    border: none;
+    background-color: #ae9e5f;
+    box-sizing: border-box;
+    font-family: OpenSans, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.feedback-form-button:focus {
+    background-color: #000;
+}
+/****************************/

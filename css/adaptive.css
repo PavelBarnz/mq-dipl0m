@@ -1,0 +1,245 @@
+@media (max-width: 1000px) {
+    .now-tranding-link {
+        font-size: 18px;
+    }
+}
+
+
+/*Стили для планшета*/
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    
+    /*ШАПКА*/
+    .page-header {
+        background: url(../images/banner-bg-tablet.jpg) center/cover no-repeat #794e4e;
+    }
+    .page-header-content {
+        padding: 40px 35px;
+    }
+    .burger-menu-button {
+        display: flex;
+    }
+    .page-header-menu {
+        display: none;
+    }
+    .header-title {
+        font-size: 40px;
+    }
+    /**********************************************/
+    
+    /*СЕЙЧАС В ТРЕНДЕ*/
+    .page-title {
+        font-size: 18px;
+    }
+    .now-tranding-card {
+        width: calc((100% / 2) - 0.2%);
+        height: 280px;
+    }
+    .now-tranding-card:nth-child(n + 3) {
+        margin-top: 4px;
+    }
+    .now-tranding-title {
+        font-size: 17px;
+    }
+    /*************************************************/
+
+    /*ТЕЛО САЙТА*/
+    .page-content-shell{
+        margin-bottom: 50px;
+    }
+    .page-content {
+        padding: 50px 35px;
+    }
+    .main {
+        width: 600px;
+    }
+    .main-card {
+        margin-top: 40px;
+        display: block;
+    }
+    .main-card-image {
+        width: 100%;
+    }
+    .main-card-content {
+        width: 100%;
+        padding: 14px 0 20px 0;
+        border-bottom: 3px solid #ededed;
+    }
+    .main-card-title {
+        font-size: 17px;
+    }
+    .main-card-date {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .our-products-item {
+        max-width: 375px;
+        width: 48%;
+    }
+    .our-products-item:nth-child(n + 3) {
+        margin-top: 25px;
+    }
+    .our-products-title {
+        font-size: 17px;
+    }
+    .page-footer {
+        padding-bottom: 35px;
+    }
+    .copyright-container {
+        height: 60px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    .now-tranding-card {
+        width: calc((100% / 4) - 0.2%);
+    }
+    .now-tranding-card:nth-child(n + 3) {
+        margin-top: 0;
+    }
+}
+/**************************************************************************************/
+
+
+/*Стили для телефона*/
+@media (max-width: 640px) {
+    /*ШАПКА*/
+    .page-header {
+        background: url(../images/banner-mobile.jpg) center/cover no-repeat #794e4e;
+        height: 640px;
+    }
+    .page-header-content {
+        padding: 30px 15px 0;
+    }
+    .burger-menu-button {
+        display: flex;
+    }
+    .page-header-menu {
+        display: none;
+    }
+    .page-header-title {
+        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .header-title {
+        font-size: 26px;
+        align-self: center;
+    }
+    .noemi-logo {
+        display: none;
+    }
+    .noemi-logo-mobile {
+        width: 100%;
+        display: block;
+    }
+    .logo-mobile {
+        display: block;
+        width: 270px;
+        margin: 0 auto 45px;
+    }
+    .page-header-nav {
+        margin-left: auto;
+    }
+    /**********************************************/
+    
+    /*СЕЙЧАС В ТРЕНДЕ*/
+    .page-title {
+        font-size: 16px;
+    }
+    .now-tranding-card {
+        width: 100%;
+        height: 230px;
+        margin-bottom: 2px;
+    }
+    .now-tranding-title {
+        font-size: 16px;
+    }
+    .now-tranding-link {
+        font-size: 16px;
+    }
+    /*************************************************/
+
+    /*ТЕЛО САЙТА*/
+    .page-content-shell{
+        margin-bottom: 50px;
+        display: block;
+    }
+    .page-content {
+        padding: 40px 15px;
+    }
+    .main {
+        width: 100%;
+    }
+    .main-card {
+        margin-top: 40px;
+        display: block;
+    }
+    .main-card-image {
+        width: 100%;
+        height: 100%;
+    }
+    .main-card-content {
+        width: 100%;
+        padding: 14px 0 20px 0;
+        border-bottom: 3px solid #ededed;
+    }
+    .main-card-title {
+        font-size: 16px;
+    }
+    .main-card-date {
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+    .main-card-text {
+        font-size: 14px;
+    }
+    .aside {
+        max-width: 360px;
+        margin: 44px auto 0;
+    }
+    .search-form-container, 
+    .subscription-form-container,
+    .tags-container {
+        margin-bottom: 40px;
+    }
+    .tags-link:nth-child(n + 5) {
+        margin-top: 6px;
+    }
+    .our-products-container {
+        display: block;
+    }
+    .our-products-item {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 360px;
+    }
+    .our-products-item:nth-child(n + 2) {
+        margin-top: 25px;
+    }
+    .our-products-title {
+        font-size: 17px;
+    }
+    .page-footer {
+        padding-bottom: 35px;
+    }
+    .copyright-container {
+        height: 60px;
+    }
+    .popup-feedback {
+        width: 90%;
+        height: 90%;
+        min-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .now-tranding-card {
+        width: calc((100% / 2) - 0.2%);
+        margin-bottom: 2px;
+    }
+}
